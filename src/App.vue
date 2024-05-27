@@ -1,5 +1,13 @@
 <template>
+  <!-- Module 3 -->
+  <h1>Module 3</h1>
+  <count-vue :count="count"></count-vue>
+  <br/>
+  <button-vue name="Add" @changeCount="count +=1"></button-vue>
+  <button-vue name="Sub" @changeCount="count -=1"></button-vue>
+
   <!-- Module 2 -->
+  <h1>Module 2</h1>
   <greet-vue></greet-vue>
   <GreetVue name="Sam"></GreetVue>
   <GreetVue name="Mike"></GreetVue>
@@ -26,6 +34,7 @@
   </card-vue>
 
   <!-- Module 1 -->
+  <h1>Module 1</h1>
   <p>{{ greeting }} {{ name }}</p>
   <p v-text="question"> </p>
   <p v-html="htmlData" :id="id" :class="id" :style="style"></p>
@@ -55,7 +64,9 @@
 </template>
 
 <script>
+import ButtonVue from './components/Button.vue'
 import CardVue from './components/Card.vue'
+import CountVue from './components/Count.vue'
 import GreetVue from './components/Greet.vue'
 import PopupVue from './components/Popup.vue'
 
@@ -65,10 +76,15 @@ export default {
   components: {
     GreetVue,
     PopupVue,
-    CardVue
+    CardVue,
+    CountVue,
+    ButtonVue
   },
   data() {
     return {
+      // Module 3
+      count: 0,
+
       // Module 2
       name: 'Superman',
       isPopupVisible: false,
@@ -83,7 +99,7 @@ export default {
         color: 'red',
         backgroundColor: 'black'
       },
-      count: 0,
+      //count: 0,
       num: 'NaN',
       isVisible: true,
       fruitVisible: true
