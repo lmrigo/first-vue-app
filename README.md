@@ -1,5 +1,8 @@
 # first-vue-app
 
+## Description
+This code refers to the course [Fundamentals of Vue.js from Coursera](https://www.coursera.org/learn/fundamentals-of-vuejs/).
+
 ## Project setup
 ```
 npm install
